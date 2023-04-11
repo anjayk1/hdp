@@ -1,0 +1,43 @@
+/* Place your CSS styles in this file */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #6E6E6DFF;
+}
+  
+li {
+    float: left;
+    border-right:1px solid #9f6ba0;
+}
+  
+li:last-child {
+    border-right: none;
+}
+  
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover:not(.active) {
+    background-color: #9f6ba0;
+}
+  
+.active {
+    background-color: #9f6ba0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Garamond, serif;
+    font-weight: normal;
+}
+body {
+    background-color: #d8bcab;
+}
+

@@ -1,6 +1,7 @@
 """Docstring - purpose of file"""
 import pandas as pd
 
+
 lookuptable = [
     ["Age", "a", "age"],
     ["CholesterolLevel", "cholesterollevel", "b",
@@ -11,44 +12,19 @@ lookuptable = [
     ["LowestHeartRate", "e", "lhr", "lowest heart rate",
         "lowestheartrate", "lowest hr"],
     ["Gender", "f", "gender", "sex"],
+    ["HasHeartDisease", "g", "has heart disease?",\
+        "has heart disease", "hasheartdisease",\
+            "heart disease", "heart disease?", "hd", "hd?", "hhd", "hhd?"],
     ['Symptoms', "h", "symptoms", "has symptoms of heart disease",
         "has symptoms of heart disease?"],
-
+    ["", ""],
     ["skip", "i", "none", "none of the above"]
 ]
-
-
-def columnclean(col_para):
-    """docstring here"""
-    question = "Which of the following options best labels what the data field \"" + col_para + \
-        "\" is?\na. Age\nb. Cholesterol Levels\nc. \
-          Blood Pressure\nd. Highest Heart Rate\ne. \
-            Lowest Heart Rate\nf. Gender\ng. Has Heart Disease?\nh. \
-              Has symptoms of heart disease?\ni. None of the above\nEnter your response: "
-
-    response = input(question)
-
-    for option in lookuptable:
-        if response.lower() in option:
-            if option[0] == "skip":
-                # do whatever you want to  do if they pick "none of the above"
-                return
-            else:
-                df.rename(columns={col: option[0]}, inplace=True)
-                return
-    print("That's not one of the options!\n")
-    columnclean(col)
 
 
 if __name__ == "__main__":
     # upload heart dataset (1988)
     df = pd.read_csv("heart(version 1).csv")
-
-    # drop unneeded columns (cp, oldpeak, slope)
-    df.drop(labels=['cp', 'oldpeak', 'slope'], axis=1, inplace=True)
-
-    for col in df.columns:
-        columnclean(col)
 
     print(list(df))
 
