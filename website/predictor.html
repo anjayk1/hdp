@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- External Script -->
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <br>
+        <h1>Heart Disease Predictor</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="predictor.html">Predictor</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <br>
+    <!-- Load external JavaScript -->
+    <form action='{{ url_for("gfg")}}' method = "POST">
+        <label for="age">Enter your age:</label>
+        <input type="number" id="age" name="age" min="0" max="125">
+        <br>
+
+        <p>What is your gender?</p>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        
+        <br>
+        <br>
+        
+        <label for="age">Enter your cholesterol level (in mg/dL):</label>
+        <input type="number" id="chol" name="chol">
+        
+        <br>
+        
+        <p>What's your chest pain type?</p>
+        <input type="radio" name="cp" value="1"> Type 1: Typical Angina
+        <input type="radio" name="cp" value="2"> Type 2: Atypical Angina
+        <input type="radio" name="cp" value="3"> Type 3: Non-Anginal Pain
+        <input type="radio" name="cp" value="4"> Type 4: Asymptomatic
+        
+        <br>
+        <br>
+        
+        <label for="bp">Enter your blood pressure (in mmHg):</label>
+        <input type="number" id="bp" name="bp">
+        
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
