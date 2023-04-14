@@ -22,25 +22,25 @@
     </header>
     <br>
     <!-- Load external JavaScript -->
-    <form action='{{ url_for("gfg")}}' method = "POST">
+    <form action="/hdp" method = "POST">
         <label for="age">Enter your age:</label>
-        <input type="number" id="age" name="age" min="0" max="125">
+        <input type="number" id="age" name="age" min="0" max="125" required>
         <br>
 
         <p>What is your gender?</p>
-        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="male" required="required"> Male
         <input type="radio" name="gender" value="female"> Female
         
         <br>
         <br>
         
         <label for="age">Enter your cholesterol level (in mg/dL):</label>
-        <input type="number" id="chol" name="chol">
+        <input type="number" id="chol" name="chol" required>
         
         <br>
         
         <p>What's your chest pain type?</p>
-        <input type="radio" name="cp" value="1"> Type 1: Typical Angina
+        <input type="radio" name="cp" value="1" required="required"> Type 1: Typical Angina 
         <input type="radio" name="cp" value="2"> Type 2: Atypical Angina
         <input type="radio" name="cp" value="3"> Type 3: Non-Anginal Pain
         <input type="radio" name="cp" value="4"> Type 4: Asymptomatic
@@ -49,7 +49,7 @@
         <br>
         
         <label for="bp">Enter your blood pressure (in mmHg):</label>
-        <input type="number" id="bp" name="bp">
+        <input type="number" id="bp" name="bp" required>
         
         <br>
         <br>
