@@ -19,7 +19,7 @@ def lrchol(input):
     def myfunc(X):
         return slope * X + intercept
 
-    per = 100 * (myfunc(input))
+    per = 100 * (1-myfunc(input))
 
     return per
 
