@@ -8,53 +8,55 @@
     <link rel="stylesheet" href="style.css">
     <!-- External Script -->
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" 
+
 </head>
 <body>
     <header>
         <br>
         <h1>Heart Disease Predictor</h1>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="predictor.html">Predictor</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href={{ url_for("index") }}>Home</a></li>
+            <li><a class="active" href={{ url_for("predictor") }}>Predictor</a></li>
+            <li><a href={{ url_for("contact") }}>Contact</a></li>
         </ul>
     </header>
     <br>
     <!-- Load external JavaScript -->
-    <form method = "POST" action="/hdp">
+    <form method = "POST">
         <label for="age">Enter your age:</label>
         <input type="number" id="age" name="age" min="0" max="125" required>
         <br>
 
         <p>What is your gender?</p>
-        <input type="radio" name="gender" value="male" required="required"> Male
-        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" id = "gender" value="male" required="required"> Male
+        <input type="radio" name="gender" id = "gender" value="female"> Female
         
         <br>
         <br>
         
-        <label for="age">Enter your cholesterol level (in mg/dL):</label>
+        <label for="age">Enter your serum or total cholesterol level (in mg/dL):</label>
         <input type="number" id="chol" name="chol" required>
         
         <br>
         
         <p>What's your chest pain type?</p>
-        <input type="radio" name="cp" value="1" required="required"> Type 1: Typical Angina 
-        <input type="radio" name="cp" value="2"> Type 2: Atypical Angina
-        <input type="radio" name="cp" value="3"> Type 3: Non-Anginal Pain
-        <input type="radio" name="cp" value="4"> Type 4: Asymptomatic
+        <input type="radio" name="cp" id="cp" value="0" required="required"> Type 1: Typical Angina  (Chest, arm, or jaw pain that feels dull, heavy, tight, or crushing) <br>
+        <input type="radio" name="cp" id="cp" value="1"> Type 2: Atypical Angina (Epigastric or back pain, burning/stabbing feeling, or indigestion) <br>
+        <input type="radio" name="cp" id="cp" value="2"> Type 3: Non-Anginal Pain (Heartburn, regurgitation, pressure or squeezing pain behind the breast bone, neck, back, or left arm ) <br>
+        <input type="radio" name="cp" id="cp" value="3"> Type 4: Asymptomatic (No Pain or None of the ones described above)
         
         <br>
         <br>
         
-        <label for="bp">Enter your blood pressure (in mmHg):</label>
+        <label for="bp">Enter your resting blood pressure (systolic) (in mmHg):</label>
         <input type="number" id="bp" name="bp" required>
         
         <br>
         <br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="submit">
     </form>
 
 </body>

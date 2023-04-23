@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <!-- External Script -->
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" 
 </head>
 <body>
     <header>
         <br>
         <h1>Heart Disease Predictor</h1>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="predictor.html">Predictor</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href={{ url_for("index") }}>Home</a></li>
+            <li><a class="active" href={{ url_for("predictor") }}>Predictor</a></li>
+            <li><a href={{ url_for("contact") }}>Contact</a></li>
         </ul>
     </header>
     <!-- Load external JavaScript -->
     <h2>Results</h2>
     <center>
-    <p></p>
+    <h3>There is a {{ FinalPercent }}% you have heart disease! </h3>
+    <p> {{ Type }} </p>
     </center>
 </body>
 </html>
