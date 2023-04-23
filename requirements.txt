@@ -1,2 +1,5 @@
 flask==2.2.3
 gunicorn==19.9.0
+pandas==1.5.3
+scipy==1.10.0
+sklearn==22.3.1
