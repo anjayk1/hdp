@@ -65,5 +65,5 @@ def predictor():
     else: 
         return render_template('predictor.html')
 
-app.run(host='0.0.0.0', port=2784)
-
+if __name__  == '__main__':
+    app.run()
