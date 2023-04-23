@@ -1,4 +1,4 @@
-/* Place your CSS styles in this file */
+/* css */
 ul {
     list-style-type: none;
     margin: 0;
@@ -7,7 +7,9 @@ ul {
     background-color: #C32C00;
     
 }
-
+p {
+    margin: auto;
+}
   
 li {
     float: left;
