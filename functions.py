@@ -9,7 +9,7 @@ from sklearn.tree import DecisionTreeClassifier
 # upload heart dataset
 df = pd.read_csv("heartdata/heart(version 1).csv")
 
-
+#Linear Regression and Cholesterol Level
 def lrchol(input):
     X = df['chol'].values
     y = df['target'].values
@@ -23,7 +23,7 @@ def lrchol(input):
 
     return per
 
-
+#Linear Regression and Blood Pressure
 def lrbp(input):
     X = df['trestbps'].values
     y = df['target'].values
@@ -37,7 +37,7 @@ def lrbp(input):
 
     return per
 
-
+#Logistic Regression and Age
 def lrage(input):
     X = df[['age']]
     y = df['target']
@@ -53,7 +53,7 @@ def lrage(input):
     hdpage = 100 - hdpage
     return hdpage
 
-
+#Logistic Regression and Sex
 def lrsex(input):
     X = df[['sex']]
     y = df['target']
@@ -69,7 +69,7 @@ def lrsex(input):
     hdpsex = 100 - hdpsex
     return hdpsex
 
-
+#Decision Tree and All Values
 def dtree(a, b, c, d, e):
     X = df[['cp', 'age', 'sex', "trestbps", "chol"]].values
     y = df['target'].values
