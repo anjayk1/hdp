@@ -8,7 +8,9 @@ ul {
     
 }
 p {
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+
 }
   
 li {
